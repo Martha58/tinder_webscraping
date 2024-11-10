@@ -54,13 +54,13 @@ try:
     fb_email = WebDriverWait(driver, 30).until(
         EC.presence_of_element_located((By.ID, 'email'))
     )
-    fb_email.send_keys('marthaimohmfonabasi@gmail.com')
+    fb_email.send_keys('enter_your_email')
 
     # Wait for the password field to be present
     fb_password = WebDriverWait(driver, 30).until(
         EC.presence_of_element_located((By.ID, 'pass'))
     )
-    fb_password.send_keys('Ilovefashion100')
+    fb_password.send_keys('enter_your_password')
     fb_password.send_keys(Keys.RETURN)
 except Exception as e:
     print(f"Login error: {e}")

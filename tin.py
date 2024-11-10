@@ -131,7 +131,7 @@ def scrape_profile_details(profile_index):
             essentials_element = WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'P') and contains(@class, '24px') and contains(@class, 'W(100%)') and contains(@class, 'Bgc($c-ds-background-primary)') and contains(@class, 'Bdrs') and contains(@class, '12px')][2]"))
             )
-            profile_data["zodiac_sign"] = essentials_element.text
+            profile_data["essenials"] = essentials_element.text
         except Exception as e:
             print(f"Essebtials not found for profile {profile_index}: {e}")
 
@@ -141,7 +141,7 @@ def scrape_profile_details(profile_index):
                 EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'P') and contains(@class, '24px') and contains(@class, 'W(100%)') and contains(@class, 'Bgc($c-ds-background-primary)') and contains(@class, 'Bdrs') and contains(@class, '12px')][3]"))
             )
 
-            profile_data["location"] = basics_element.text
+            profile_data["basics"] = basics_element.text
         except Exception as e:
             print(f"Basic not found for profile {profile_index}: {e}")
 
